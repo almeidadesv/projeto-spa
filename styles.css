@@ -22,7 +22,7 @@ header {
 
 main {
     display: flex;
-    flex: 1;
+    height: 100vh;
 }
 
 .aba-lateral {
