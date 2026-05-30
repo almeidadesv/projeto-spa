@@ -8,7 +8,7 @@
 body {
     height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column 
 }
 
 header {
@@ -31,7 +31,7 @@ main {
     background-color: rgb(209, 209, 209);
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 50px;
     align-items: center;
     justify-content: center;
 }
@@ -62,4 +62,70 @@ button:hover {
 
 button:active {
     scale: 130%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#ferramentas {
+    display: flex;
+}
+
+#painelmoeda, #painelimc, #paineltemperatura, #painelvelocidade, #painelmassa, #painelregra:hidden{
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+#botao-regra, #botao-imc {
+    padding: 8px;
+}
+
+#painelregra hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px
+}
+
+#painelimc hidden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px
+}
+
+input {
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+.inputsregra {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+p {
+    font-weight: bolder;
+}
+
+.inputsimc {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.generosimc {
+    display: flex;
+    gap: 100px;
 }

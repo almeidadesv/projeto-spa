@@ -7,37 +7,84 @@
     <link rel="stylesheet" href="styles.css">
     <title>Painel de Ferramentas</title>
 </head>
+
 <body>
+
     <header>
         <h1>Painel de Ferramentas</h1>
     </header>
+
     <main>
+
         <nav class="aba-lateral">
-
-        <section id="moeda">
-            <button>Conversor de Moedas</button>
-        </section>
-
-        <section id="imc">
-            <button>Calcular IMC</button>
-        </section>
-
-        <section id="temperatura">
-            <button>Conversor de Temperatura</button>
-        </section>
-
-        <section id="velocidade">
-            <button>Conversor de Velocidade</button>
-        </section>
-
-        <section id="massa">
-            <button>Conversor de Massa</button>
-        </section>
-        
+            <button id="puxarmoeda">Conversor de Moedas</button>
+            <button id="puxarimc">Calcular IMC</button>
+            <button id="puxartemperatura">Conversor de Temperatura</button>
+            <button id="puxarvelocidade">Conversor de Velocidade</button>
+            <button id="puxarmassa">Conversor de Massa</button>
+            <button id="regratres">Regra de Três</button>
         </nav>
+
+        <section id="ferramentas">
+
+            <div id="painelmoeda">
+            </div>
+
+            <div id="painelimc" hidden>
+                <p>Calcule seu IMC!</p>
+                <div class="inputsimc">
+                <input type="text" placeholder="Digite o peso">
+                <input type="text" placeholder="Digite a altura">
+                </div>
+                <div class="generosimc">
+                    <div>
+                <label for="">Mulher</label>
+                <input type="radio">
+                </div>
+                <div>
+                <label for="">Homem</label>
+                <input type="radio">
+                </div>
+                </div>
+                <button id="botao-imc">Calcular</button>
+            </div>
+
+            <div id="paineltemperatura">
+
+            </div>
+
+            <div id="painelvelocidade">
+
+            </div>
+
+            <div id="painelmassa">
+
+            </div>
+
+            <div id="painelregra" hidden>
+                <p>Calcule seu número X!</p>
+                <div class="inputsregra">
+                <input type="text" placeholder="Digite o número">
+                <input type="text" placeholder="Digite o número">
+                </div>
+                <div class="inputsregra">
+                <input type="text" placeholder="Digite o número">
+                <input id="resultadoregra" type="text" placeholder="X">
+                </div>
+                <button id="botao-regra">Calcular</button>
+                </div>
+                
+            
+
+
+        </section>
+
     </main>
+
     <footer>
         <p>Desenvolvido por Alika</p>
     </footer>
+
 </body>
+
 </html>
