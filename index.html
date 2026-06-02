@@ -27,51 +27,33 @@
 
         <section id="ferramentas">
 
-            <div id="painelmoeda">
+            <div class="painelmoeda hidden">
             </div>
 
-            <div id="painelimc" hidden>
+            <div class="painelimc hidden">
                 <p>Calcule seu IMC!</p>
                 <div class="inputsimc">
-                <input type="text" placeholder="Digite o peso">
-                <input type="text" placeholder="Digite a altura">
+                <input class="pesoDigitado" type="text" placeholder="Digite o peso">
+                <input class="alturaDigitada" type="text" placeholder="Digite a altura com . ex: 1.65">
                 </div>
-                <div class="generosimc">
-                    <div>
-                <label for="">Mulher</label>
-                <input type="radio">
-                </div>
-                <div>
-                <label for="">Homem</label>
-                <input type="radio">
-                </div>
-                </div>
-                <button id="botao-imc">Calcular</button>
+                <button class="botao-imc">Calcular</button>
+                <p id="resultadoIMC"></p>
             </div>
 
-            <div id="paineltemperatura">
+            <div class="paineltemperatura hidden">
 
             </div>
 
-            <div id="painelvelocidade">
+            <div class="painelvelocidade hidden">
 
             </div>
 
-            <div id="painelmassa">
+            <div class="painelmassa hidden">
 
             </div>
 
-            <div id="painelregra" hidden>
+            <div class="painelregra hidden">
                 <p>Calcule seu número X!</p>
-                <div class="inputsregra">
-                <input type="text" placeholder="Digite o número">
-                <input type="text" placeholder="Digite o número">
-                </div>
-                <div class="inputsregra">
-                <input type="text" placeholder="Digite o número">
-                <input id="resultadoregra" type="text" placeholder="X">
-                </div>
-                <button id="botao-regra">Calcular</button>
                 </div>
                 
             
