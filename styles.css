@@ -95,6 +95,15 @@ section {
     gap: 15px
 }
 
+.painelmoeda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px
+}
+
+
 .painelimc{
     display: flex;
     justify-content: center;

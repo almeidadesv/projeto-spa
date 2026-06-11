@@ -38,8 +38,26 @@ esconderPaineis()
 
 //
 
+document.querySelector(".botao-moedarealpradolar").onclick = conversorDeMoedas;
+
 function conversorDeMoedas (){
+
+    let opcao = prompt("Digite 1 para converter Real para Dólar e 2 pro contrário")
+
+    let quantia = document.querySelector(".quantiaDigitada").value.trim()
+    let quantiaFinalDolar = (parseFloat(quantia) / 5.12)
+    let quantiaFinalReais = (parseFloat(quantia) * 5.12 )
+
+    if (opcao == "1") {
+    document.getElementById("quantiaConvertida").innerHTML =
+    "A quantia de dólares é de " + quantiaFinalDolar.toFixed(2);
+    }
+    else {
+    document.getElementById("quantiaConvertida").innerHTML =
+    "A quantia de reais é de " + quantiaFinalReais.toFixed(2);
+    }
 }
+
 
 //
 
