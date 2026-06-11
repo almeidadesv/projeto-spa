@@ -38,17 +38,17 @@ esconderPaineis()
 
 //
 
-document.querySelector(".botao-moedarealpradolar").onclick = conversorDeMoedas;
+document.querySelector(".botao-moeda").onclick = conversorDeMoedas;
 
 function conversorDeMoedas (){
 
-    let opcao = prompt("Digite 1 para converter Real para Dólar e 2 pro contrário")
+    let opcao1 = prompt("Digite 1 para converter Real para Dólar e 2 pro contrário")
 
     let quantia = document.querySelector(".quantiaDigitada").value.trim()
     let quantiaFinalDolar = (parseFloat(quantia) / 5.12)
     let quantiaFinalReais = (parseFloat(quantia) * 5.12 )
 
-    if (opcao == "1") {
+    if (opcao1 == "1") {
     document.getElementById("quantiaConvertida").innerHTML =
     "A quantia de dólares é de " + quantiaFinalDolar.toFixed(2);
     }
@@ -64,8 +64,8 @@ function conversorDeMoedas (){
 document.querySelector(".botao-imc").onclick = calcularImc;
 
 function calcularImc() {
-    let peso = +document.querySelector(".pesoDigitado").value.trim();
-    let altura = +document.querySelector(".alturaDigitada").value.trim();
+    let peso = document.querySelector(".pesoDigitado").value.trim();
+    let altura = document.querySelector(".alturaDigitada").value.trim();
 
     let imc = peso / altura ** 2;
     let classificacao = "";
@@ -83,12 +83,28 @@ calcularImc()
 
 //
 
+document.querySelector(".botao-temperatura").onclick = conversorDeTemperatura
 
 function conversorDeTemperatura () {
 
+let opcao2 = prompt("Digite 1 pra converter C para F ou 2 pro contrário")
+
+    let temperatura = document.querySelector(".temperaturaDigitada").value.trim();
+    let cparaf = temperatura * 1.8 + 32
+    let fparac = ((temperatura - 32)* 5 / 9).toFixed(5)
+
+    if (opcao2 == "1") {
+        document.getElementById("resultadoTemperatura").innerHTML =
+        "A temperatura é igual a " + cparaf + "°F"
+    }
+    else {
+        document.getElementById("resultadoTemperatura").innerHTML =
+        "A temperatura é igual a " + fparac + "°C"
+    } 
 }
 
 //
+
 
 function conversorDeVelocidade () {
 
