@@ -83,16 +83,12 @@ section {
     height: 500px;
 }
 
-#botao-regra, #botao-imc {
-    padding: 8px;
-}
-
 .painelregra {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px
+    gap: 20px
 }
 
 .painelmoeda {
@@ -102,6 +98,23 @@ section {
     flex-direction: column;
     gap: 20px
 }
+
+.painelmassa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+}
+
+.painelvelocidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+}
+
 .paineltemperatura {
     display: flex;
     justify-content: center;

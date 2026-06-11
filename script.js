@@ -64,26 +64,37 @@ function conversorDeMoedas (){
 document.querySelector(".botao-imc").onclick = calcularImc;
 
 function calcularImc() {
+
+    let opcao0 = prompt("Digite 1 pra calcular o IMC feminino e 2 pro masculino")
+
     let peso = document.querySelector(".pesoDigitado").value.trim();
     let altura = document.querySelector(".alturaDigitada").value.trim();
 
     let imc = peso / altura ** 2;
     let classificacao = "";
 
-    if      (imc < 18.5) classificacao = "Abaixo do peso";
-    else if (imc < 25)   classificacao = "Peso normal";
-    else if (imc < 30)   classificacao = "Sobrepeso";
-    else                 classificacao = "Obesidade";
+    if (opcao0 == 1) {
+    if (imc <= 0) classificacao = "Digite o valor correto";
+    else if (imc < 18.5) classificacao = "Abaixo do peso";
+    else if (imc < 23.9) classificacao = "Peso normal";
+    else if (imc < 28.9) classificacao = "Sobrepeso";
+    else if (imc > 29.0) classificacao = "Obesidade";
+    }
+    else {
+    if (imc <= 0) classificacao = "Digite o valor correto";
+    else if (imc < 18.5) classificacao = "Abaixo do peso";
+    else if (imc < 24.9) classificacao = "Peso normal";
+    else if (imc < 29.9) classificacao = "Sobrepeso";
+    else if (imc > 30) classificacao = "Obesidade";
+    }
 
     document.getElementById("resultadoIMC").innerHTML =
         "IMC: " + imc.toFixed(2) + " = " + classificacao;
 }
 
-calcularImc()
-
 //
 
-document.querySelector(".botao-temperatura").onclick = conversorDeTemperatura
+document.querySelector(".botao-temperatura").onclick = conversorDeTemperatura;
 
 function conversorDeTemperatura () {
 
@@ -105,19 +116,64 @@ let opcao2 = prompt("Digite 1 pra converter C para F ou 2 pro contrário")
 
 //
 
+document.querySelector(".botao-velocidade").onclick = conversorDeVelocidade;
 
 function conversorDeVelocidade () {
 
+let opcao3 = prompt("Digite 1 para converter km/h por mph e 2 pro contrário");
+
+    let velocidade = document.querySelector(".velocidadeDigitada").value.trim();
+    
+    let kmpramilhas = velocidade * 0.621371
+    let milhasprakm = velocidade * 1.60934
+    
+    if (opcao3 == 1) {
+        document.getElementById("resultadoVelocidade").innerHTML =
+        velocidade + " km/h " + "equivale a " + kmpramilhas + " mph"
+    }
+    else {
+        document.getElementById("resultadoVelocidade").innerHTML =
+        velocidade + " mph equivale a " + milhasprakm + " km/h"
+    }
+
 }
 
 //
+
+document.querySelector(".botao-massa").onclick = conversorDeMassa;
 
 function conversorDeMassa () {
 
+    let opcao4 = prompt("Digite 1 pra converter kg pra lbs ou 2 pro contrário");
+
+    let massa = document.querySelector(".pesodoisDigitado").value.trim()
+
+    let kgpralbs = massa * 2.2046
+    let lbsprakg = (massa / 2.2046).toFixed(6)
+
+    if (opcao4 == 1) {
+        document.getElementById("resultadoMassa").innerHTML =
+        massa + "kg é igual a " + kgpralbs + "lbs"
+    }
+    else {
+        document.getElementById("resultadoMassa").innerHTML =
+        massa + "lbs é igual a " + lbsprakg + "kg"
+    }
 }
 
 //
 
+document.querySelector(".botao-regra").onclick = regraDeTres;
+
 function regraDeTres () {
+
+    let valorum = document.querySelector(".numeroum").value.trim();
+    let valordois = document.querySelector(".numerodois").value.trim();
+    let valortres = document.querySelector(".numerotres").value.trim();
+
+    let x = valordois * valortres / valorum
+
+    document.getElementById("resultadoRegra").innerHTML =
+    "O número X é igual a: " + x 
     
 }
