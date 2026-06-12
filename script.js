@@ -64,28 +64,29 @@ function conversorDeMoedas (){
 document.querySelector(".botao-imc").onclick = calcularImc;
 
 function calcularImc() {
+    let opcao0 = prompt("Digite 1 pra calcular o IMC feminino e 2 pro masculino");
 
-    let opcao0 = prompt("Digite 1 pra calcular o IMC feminino e 2 pro masculino")
+    let peso = parseFloat(document.querySelector(".pesoDigitado").value);
+    let altura = parseFloat(document.querySelector(".alturaDigitada").value);
 
-    let peso = document.querySelector(".pesoDigitado").value.trim();
-    let altura = document.querySelector(".alturaDigitada").value.trim();
+    if (isNaN(peso) || peso <= 0 || isNaN(altura) || altura <= 0) {
+        document.getElementById("resultadoIMC").innerHTML = "Por favor, digite valores válidos.";
+        return; 
+    }
 
-    let imc = peso / altura ** 2;
+    let imc = peso / (altura * altura);
     let classificacao = "";
 
     if (opcao0 == 1) {
-    if (imc <= 0) classificacao = "Digite o valor correto";
-    else if (imc < 18.5) classificacao = "Abaixo do peso";
-    else if (imc < 23.9) classificacao = "Peso normal";
-    else if (imc < 28.9) classificacao = "Sobrepeso";
-    else if (imc > 29.0) classificacao = "Obesidade";
-    }
-    else {
-    if (imc <= 0) classificacao = "Digite o valor correto";
-    else if (imc < 18.5) classificacao = "Abaixo do peso";
-    else if (imc < 24.9) classificacao = "Peso normal";
-    else if (imc < 29.9) classificacao = "Sobrepeso";
-    else if (imc > 30) classificacao = "Obesidade";
+        if (imc < 18.5) classificacao = "Abaixo do peso";
+        else if (imc < 23.9) classificacao = "Peso normal";
+        else if (imc < 28.9) classificacao = "Sobrepeso";
+        else classificacao = "Obesidade";
+    } else {
+        if (imc < 18.5) classificacao = "Abaixo do peso";
+        else if (imc < 24.9) classificacao = "Peso normal";
+        else if (imc < 29.9) classificacao = "Sobrepeso";
+        else classificacao = "Obesidade";
     }
 
     document.getElementById("resultadoIMC").innerHTML =
